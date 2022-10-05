@@ -4491,7 +4491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2741700999727695580, guid: 4c9ab9d7dc82cc547a8676ff3460e30e, type: 3}
       propertyPath: maxLevelNum
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2741700999727695580, guid: 4c9ab9d7dc82cc547a8676ff3460e30e, type: 3}
       propertyPath: victoryView
