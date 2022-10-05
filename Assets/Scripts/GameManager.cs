@@ -149,7 +149,6 @@ public class GameManager : MonoBehaviour
         if (isPausing) return;
         playerRig.simulated = false;
         //Time.timeScale = 0;
-        Cursor.visible = true;
         pauseView.SetActive(true);
         pauseBtn.SetActive(false);
         isPausing = true;
@@ -162,7 +161,6 @@ public class GameManager : MonoBehaviour
         if (!isPausing) return;
         playerRig.simulated = true;
         //Time.timeScale = 1;
-        Cursor.visible = false;
         pauseView.SetActive(false);
         pauseBtn.SetActive(true);
         isPausing = false;
