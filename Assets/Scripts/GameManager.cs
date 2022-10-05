@@ -187,6 +187,11 @@ public class GameManager : MonoBehaviour
             num++;
             SceneManager.LoadScene("Level_" + num);
         }
+        else
+        {
+            //播放ED
+            SceneManager.LoadScene("ED");
+        }
     }
 
     public void OnExitBtnPressed()
