@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
     [HideInInspector] public MCursor myCursor;
     [HideInInspector] public AudioManager audioManager;
+    public GameObject titlePic = null;
     public GameObject player = null;
     public GameObject components;
     public PhysicsMaterial2D playerNormal;
@@ -201,5 +202,11 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("close");
         ContinueGame();
+    }
+
+    public void SwitchBackground(bool useInside)
+    {
+        if (!titlePic) return;
+        titlePic.SetActive(!useInside);
     }
 }

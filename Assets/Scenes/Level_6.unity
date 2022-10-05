@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 372156879}
   m_Layer: 0
   m_Name: Layer2_ice
-  m_TagString: Untagged
+  m_TagString: NoBounce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 452710241}
   m_Layer: 0
   m_Name: Layer5_Round
-  m_TagString: Untagged
+  m_TagString: NoBounce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1389,7 +1389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8615279242830305330, guid: 8039a75d0c2056246a0f8c8f4baf8eec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: -0.57
       objectReference: {fileID: 0}
     - target: {fileID: 8615279242830305330, guid: 8039a75d0c2056246a0f8c8f4baf8eec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1450,7 +1450,7 @@ GameObject:
   - component: {fileID: 1111863434}
   m_Layer: 0
   m_Name: Layer1_frame
-  m_TagString: Untagged
+  m_TagString: NoBounce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5245,7 +5245,7 @@ GameObject:
   - component: {fileID: 2102420916}
   m_Layer: 0
   m_Name: Layer3_bounce
-  m_TagString: Untagged
+  m_TagString: Bounce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
