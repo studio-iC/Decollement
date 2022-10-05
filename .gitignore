@@ -2,3 +2,5 @@ Logs/
 UserSettings/
 Library/
 Temp/
+*.csproj
+*.sln

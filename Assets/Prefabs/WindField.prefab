@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: 0
   field: {fileID: 3943447139176395224}
-  smallForce: 0.8
+  smallForce: 1.2
   strongForce: 1.2
 --- !u!212 &3943447138739855216
 SpriteRenderer:
