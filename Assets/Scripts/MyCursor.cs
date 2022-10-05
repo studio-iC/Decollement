@@ -16,6 +16,7 @@ public class MyCursor : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.instance.isPausing) return;
         //自定义鼠标追踪
         Vector2 pos  = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector2(pos.x, pos.y);

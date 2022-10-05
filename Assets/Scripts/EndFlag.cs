@@ -9,7 +9,11 @@ public class EndFlag : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("Completed!!");
+            //重新显示鼠标
+            Cursor.visible = true;
             //TODO：关卡完成对话框
+            GameManager.instance.ShowVictoryView(true);
+            
         }
     }
 }

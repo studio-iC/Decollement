@@ -1,21 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     [HideInInspector] public MyCursor myCursor;
+    [HideInInspector] public AudioManager audioManager;
     public GameObject player;
     public GameObject components;
     public PhysicsMaterial2D playerNormal;
     public PhysicsMaterial2D playerNoFric;
+    public GameObject victoryView;
+    public GameObject pauseView;
+
+    public int maxLevelNum = 2;
 
 
     [HideInInspector] public Rigidbody2D playerRig;
     [HideInInspector] public BoxCollider2D playerBoxColl;
     [HideInInspector] public CircleCollider2D playerCirColl;
 
+
+    [HideInInspector] public bool isPausing = false;
     // 属性
     private bool c_gravity = true;
     private bool c_angles = true;
@@ -49,7 +57,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape)){
-            Cursor.visible = !Cursor.visible;
+            PauseGame();
         }
     }
 
@@ -118,5 +126,64 @@ public class GameManager : MonoBehaviour
             playerBoxColl.sharedMaterial = playerNoFric;
             playerCirColl.sharedMaterial = playerNoFric;
         }
+    }
+
+    public void ShowVictoryView(bool show)
+    {
+        isPausing = true;
+        victoryView.SetActive(show);
+    }
+
+    //暂停游戏
+    public void PauseGame()
+    {
+        if (isPausing) return;
+        playerRig.simulated = false;
+        //Time.timeScale = 0;
+        Cursor.visible = true;
+        pauseView.SetActive(true);
+        isPausing = true;
+    }
+
+    //取消暂停，继续游戏
+    public void ContinueGame()
+    {
+        if (!isPausing) return;
+        playerRig.simulated = true;
+        //Time.timeScale = 1;
+        Cursor.visible = false;
+        pauseView.SetActive(false);
+        isPausing = false;
+    }
+
+    //通关按钮
+    public void OnHomeBtnPressed()
+    {
+        SceneManager.LoadScene("Title");
+    }
+    public void OnRetryBtnPressed()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void OnNextBtnPressed()
+    {
+        //获取当前关卡编号
+        int num = int.Parse(SceneManager.GetActiveScene().name.Split("_")[1]);
+        if (num < maxLevelNum)
+        {
+            num++;
+            SceneManager.LoadScene("Level_" + num);
+        }
+    }
+
+    public void OnExitBtnPressed()
+    {
+        Application.Quit();
+    }
+
+    public void OnCloseBtnPressed()
+    {
+        Debug.Log("close");
+        ContinueGame();
     }
 }

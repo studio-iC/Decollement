@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1006141361649409429}
   - component: {fileID: 1778992576050381288}
   - component: {fileID: 3460048253243420781}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.704, y: 0.704}
   m_EdgeRadius: 0
 --- !u!58 &1778992576050381288
 CircleCollider2D:
@@ -77,7 +77,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.34497997
 --- !u!50 &3460048253243420781
 Rigidbody2D:
   serializedVersion: 4
@@ -111,8 +111,12 @@ PrefabInstance:
       value: Circle
       objectReference: {fileID: 0}
     - target: {fileID: 1904491351866865633, guid: 2d37749699883d746abf44f88160f932, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904491351866865633, guid: 2d37749699883d746abf44f88160f932, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7569600252820421457, guid: 2d37749699883d746abf44f88160f932, type: 3}
       propertyPath: m_RootOrder
@@ -187,6 +191,10 @@ PrefabInstance:
     - target: {fileID: 2096611878641980255, guid: d77c418fe1da8254794c6bdc570ac898, type: 3}
       propertyPath: m_Name
       value: Square
+      objectReference: {fileID: 0}
+    - target: {fileID: 2096611878641980255, guid: d77c418fe1da8254794c6bdc570ac898, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2096611878641980255, guid: d77c418fe1da8254794c6bdc570ac898, type: 3}
       propertyPath: m_IsActive

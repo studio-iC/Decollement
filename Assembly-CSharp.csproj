@@ -37,10 +37,12 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\WindField.cs" />
+     <Compile Include="Assets\Scripts\TitleSceneController.cs" />
      <Compile Include="Assets\Scripts\EndFlag.cs" />
      <Compile Include="Assets\Scripts\MyCursor.cs" />
      <Compile Include="Assets\Scripts\ComponentMass.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\ComponentDefault.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
