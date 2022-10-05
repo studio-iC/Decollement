@@ -7,7 +7,7 @@ public class TitleSceneController : MonoBehaviour
 {
     public void OnStartBtnPressed()
     {
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene("SelectLevel");
     }
 
     public void OnExitBtnPressed()

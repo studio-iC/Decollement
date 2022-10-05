@@ -47,7 +47,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effects:
-  - {fileID: 8300000, guid: 5a902281ccd771148996b95e6dcb3017, type: 3}
+  - {fileID: 8300000, guid: c5073c6f8cb7dee47b1f04c677604c71, type: 3}
+  - {fileID: 8300000, guid: 6d7abe686e520364eb92d3984978697e, type: 3}
+  - {fileID: 8300000, guid: a2faf63612e4ad34790add0ba9ebae5d, type: 3}
+  - {fileID: 8300000, guid: 6db027cc326ad75439f45f49bdfcfb48, type: 3}
+  bgms: []
+  bgmPlayer: {fileID: 1103196843836069687}
   soundEffectPlayer: {fileID: 1103196843977350871}
 --- !u!1 &1103196843836069684
 GameObject:
@@ -93,7 +98,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5a902281ccd771148996b95e6dcb3017, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.364
+  m_Volume: 0.271
   m_Pitch: 1
   Loop: 0
   Mute: 0

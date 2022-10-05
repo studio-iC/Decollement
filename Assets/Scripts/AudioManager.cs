@@ -5,6 +5,8 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public List<AudioClip> effects;
+    public List<AudioClip> bgms;
+    public AudioSource bgmPlayer;
     public AudioSource soundEffectPlayer;
 
     private void Start() {
@@ -15,13 +17,27 @@ public class AudioManager : MonoBehaviour
     ///<summary> type: "effect" / "bgm"</summary>
     public void Play(string name, string type = "effect")
     {
-        foreach (AudioClip ac in effects)
-        {
-            if (name == ac.name)
+        if (type == "effect")
+            foreach (AudioClip ac in effects)
             {
-                soundEffectPlayer.PlayOneShot(ac);
-                break;
+                if (name == ac.name)
+                {
+                    soundEffectPlayer.clip = ac;
+                    soundEffectPlayer.Play();
+                    Debug.Log("!!!");
+                    break;
+                }
             }
-        }
+        else if (type == "bgm")
+            foreach (AudioClip ac in bgms)
+            {
+                if (name == ac.name)
+                {
+                    bgmPlayer.loop = true;
+                    bgmPlayer.clip = ac;
+                    bgmPlayer.Play();
+                    break;
+                }
+            }
     }
 }

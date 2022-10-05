@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-    [HideInInspector] public MyCursor myCursor;
+    [HideInInspector] public MCursor myCursor;
     [HideInInspector] public AudioManager audioManager;
-    public GameObject player;
+    public GameObject player = null;
     public GameObject components;
     public PhysicsMaterial2D playerNormal;
     public PhysicsMaterial2D playerNoFric;
@@ -45,10 +45,12 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
     }
+
     void Start()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
         //初始化玩家组件
+        if (!player) return;
         playerRig = player.GetComponent<Rigidbody2D>();
         playerBoxColl = player.GetComponent<BoxCollider2D>();
         playerCirColl = player.GetComponent<CircleCollider2D>();
@@ -56,8 +58,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape)){
-            PauseGame();
+        if (Input.GetKeyUp(KeyCode.Escape) && player){
+            if (isPausing)
+                ContinueGame();
+            else
+                PauseGame();
         }
     }
 
@@ -132,6 +137,8 @@ public class GameManager : MonoBehaviour
     {
         isPausing = true;
         victoryView.SetActive(show);
+        audioManager.bgmPlayer.Pause();
+        audioManager.Play("过关", "effect");
     }
 
     //暂停游戏
@@ -143,6 +150,7 @@ public class GameManager : MonoBehaviour
         Cursor.visible = true;
         pauseView.SetActive(true);
         isPausing = true;
+        audioManager.bgmPlayer.Pause();
     }
 
     //取消暂停，继续游戏
@@ -154,6 +162,7 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
         pauseView.SetActive(false);
         isPausing = false;
+        audioManager.bgmPlayer.Play();
     }
 
     //通关按钮

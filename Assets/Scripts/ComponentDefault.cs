@@ -10,7 +10,7 @@ public class ComponentDefault : MonoBehaviour
     public string attr;
     
     public bool isEnabled = true;
-    protected SpriteRenderer spren;
+    protected SpriteRenderer spren = null;
     
 
     protected void Start() 
@@ -61,6 +61,7 @@ public class ComponentDefault : MonoBehaviour
     }
 
     public void EnableAttr() {
+        if (!spren) return;
         isEnabled = true;
         spren.sprite = enable;
     }
