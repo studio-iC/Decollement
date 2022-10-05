@@ -1528,6 +1528,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1103196843836069687, guid: 4a52fb50d63cf174d92ca8be0e0219e9, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e42a8da40885a43a0917dbff0f2c6128, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a52fb50d63cf174d92ca8be0e0219e9, type: 3}
 --- !u!1 &646105744
@@ -1933,6 +1937,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1185282583}
+    - target: {fileID: 2741700999727695580, guid: 4c9ab9d7dc82cc547a8676ff3460e30e, type: 3}
+      propertyPath: pauseBtn
+      value: 
+      objectReference: {fileID: 1466457755}
     - target: {fileID: 2741700999727695580, guid: 4c9ab9d7dc82cc547a8676ff3460e30e, type: 3}
       propertyPath: pauseView
       value: 
@@ -4611,6 +4619,11 @@ GameObject:
 --- !u!1 &1466457754 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6974836841490816063, guid: cd56cf5c03015a841937334c0840c074, type: 3}
+  m_PrefabInstance: {fileID: 1466457752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1466457755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9008512221026946795, guid: cd56cf5c03015a841937334c0840c074, type: 3}
   m_PrefabInstance: {fileID: 1466457752}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1491916352

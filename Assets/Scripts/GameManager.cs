@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public PhysicsMaterial2D playerNoFric;
     public GameObject victoryView;
     public GameObject pauseView;
+    public GameObject pauseBtn;
 
     public int maxLevelNum = 2;
 
@@ -137,6 +138,7 @@ public class GameManager : MonoBehaviour
     {
         isPausing = true;
         victoryView.SetActive(show);
+        pauseBtn.SetActive(false);
         audioManager.bgmPlayer.Pause();
         audioManager.Play("过关", "effect");
     }
@@ -149,6 +151,7 @@ public class GameManager : MonoBehaviour
         //Time.timeScale = 0;
         Cursor.visible = true;
         pauseView.SetActive(true);
+        pauseBtn.SetActive(false);
         isPausing = true;
         audioManager.bgmPlayer.Pause();
     }
@@ -161,6 +164,7 @@ public class GameManager : MonoBehaviour
         //Time.timeScale = 1;
         Cursor.visible = false;
         pauseView.SetActive(false);
+        pauseBtn.SetActive(true);
         isPausing = false;
         audioManager.bgmPlayer.Play();
     }
