@@ -52,7 +52,7 @@ MonoBehaviour:
   playerNoFric: {fileID: 6200000, guid: e8e571dd29f15b149bd1c60530f60b9c, type: 2}
   victoryView: {fileID: 0}
   pauseView: {fileID: 0}
-  maxLevelNum: 2
+  maxLevelNum: 5
   playerRig: {fileID: 0}
   playerBoxColl: {fileID: 0}
   playerCirColl: {fileID: 0}

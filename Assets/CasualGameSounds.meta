@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/CasualGameSounds.meta
 guid: d8a18bdd26ea45e4ebb0371899de4a96
 folderAsset: yes
+========
+guid: 469e07ef3951f8a4e8acb0537f10e43d
+>>>>>>>> adc3af0ad9e2f1307bd88fb057a4bda28b029a11:Assets/Scenes/Level_4.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
