@@ -4447,6 +4447,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1847706129}
     - target: {fileID: 2741700999727695580, guid: 4c9ab9d7dc82cc547a8676ff3460e30e, type: 3}
+      propertyPath: pauseBtn
+      value: 
+      objectReference: {fileID: 1636910792}
+    - target: {fileID: 2741700999727695580, guid: 4c9ab9d7dc82cc547a8676ff3460e30e, type: 3}
       propertyPath: pauseView
       value: 
       objectReference: {fileID: 1636910790}
@@ -4802,6 +4806,11 @@ GameObject:
 --- !u!1 &1636910791 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6974836841534459706, guid: cd56cf5c03015a841937334c0840c074, type: 3}
+  m_PrefabInstance: {fileID: 1636910789}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1636910792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9008512221026946795, guid: cd56cf5c03015a841937334c0840c074, type: 3}
   m_PrefabInstance: {fileID: 1636910789}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1777335842 stripped
