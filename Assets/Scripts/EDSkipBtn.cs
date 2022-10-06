@@ -12,7 +12,7 @@ public class EDSkipBtn : MonoBehaviour
         videoPlayer.Stop();
         SceneManager.LoadScene("Title");
     }
-
+/*
     private void Update() 
     {
         if (videoPlayer.isPlaying)
@@ -23,5 +23,5 @@ public class EDSkipBtn : MonoBehaviour
                 SceneManager.LoadScene("Title");
             }
         }
-    }    
+    }    */
 }
